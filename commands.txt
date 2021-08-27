@@ -1,0 +1,33 @@
+1. First create one freestyle Repo and clone it
+2. webserver creation:
+
+create one machine and connect the machine with gitbash 
+configure the webserver refer repository webserver_config to configure webserver
+
+create one user in webserver machine 
+--> useradd username
+--> passwd username
+--> chown user:user /var/www/html
+
+
+ssh passwordless authentication
+
+--> vi /etc/ssh/sshd_config
+--> systemctl restart sshd
+--> ifconfig
+
+Now go to the jenkins machine  and configure
+--> vi /etc/ssh/sshd_config
+--> systemctl restart sshd
+--> ssh keygen
+--> cd /root/.ssh/
+--> ssh-copy-id user@webserverip
+--> ssh user@webserverip
+
+jenkins Dashboard:
+
+1. publish over ssh plugins
+--> manage jenkins --> available --> publish over ssh
+2. configure system --> webserver details.(name, ip , user)
+3. Now create one freestyle project
+
