@@ -30,4 +30,9 @@ jenkins Dashboard:
 --> manage jenkins --> available --> publish over ssh
 2. configure system --> webserver details.(name, ip , user)
 3. Now create one freestyle project
-
+4. Go to git project paste the git url and create token
+5. Go to build section and click on send file or execute commands over ssh
+--> server name -->source file (**/*.html) --> remote directory( www/html)
+6. post build actions --> send build artifacts over ssh
+--> server name -->source file (**/*.html) --> remote directory( www/html)
+apply save and build.
